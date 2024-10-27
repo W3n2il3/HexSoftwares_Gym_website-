@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym & Fitness</title>
+  <link rel="stylesheet" href="App.html">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Basic Styles */
+    body {
+      scroll-behavior: smooth;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('gym.jpeg') no-repeat center center/cover;
+      background-image: url(gym.jpeg);
+      background-size: cover;
+      height: 100vh;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2em;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 80px 0;
+    }
+    .facilities, .services, .membership {
+      background-color: #f4f4f4;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    p {
+      color: #555;
+    }
+
+    /* Facilities */
+    .facilities .card {
+      display: inline-block;
+      width: 30%;
+      margin: 10px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    /* Services */
+    .services-list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .services-list div {
+      width: 45%;
+      background-color: #fff;
+      padding: 20px;
+      margin: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    /* Membership */
+    .membership-plan {
+      display: inline-block;
+      width: 30%;
+      margin: 10px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      color: #333;
+    }
+    .membership-plan h3 {
+      color: #ff9800;
+    }
+
+    .video-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+    border-radius: 8px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.results-table th, .results-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for table cells */
+}
+
+.results-table th {
+    background: rgba(255, 255, 255, 0.9); /* Slightly less transparent for header cells */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin-top: 10px;
+    color: white;
+}
+
+form input {
+    padding: 8px;
+    margin-top: 5px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#facilities">Facilities</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#membership">Membership</a></li>
+      <li><a href="healthydiet.html">Healthy Diet </a></li>
+      <li><a href="exercises.html">Gym Gallary</a></li> 
+      <li><a href="gym results.html">Gym Tracker</a></li>
+    </ul>
+
+    <a href="healthydiet.html" class="hero-btn"></a>
+    <a href="exercises.html" class="hero-btn"></a>
+    <a href="gym results.html" class="hero-btn"></a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome to Our Gym</h1>
+      <p>Fitness for Every Body</p>
+    </div>
+  </section>
+
+  <!-- Facilities Section -->
+  <section id="facilities" class="facilities">
+    <div class="container">
+      <h2>Our Facilities</h2>
+      <div class="card">
+        <h3>Weight Room</h3>
+        <p>State-of-the-art weights and machines for all levels.</p>
+      </div>
+      <div class="card">
+        <h3>Cardio Zone</h3>
+        <p>Treadmills, bikes, and more for cardio fitness.</p>
+      </div>
+      <div class="card">
+        <h3>Swimming Pool</h3>
+        <p>Olympic-sized pool for swimmers of all levels.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-list">
+        <div>
+          <h3>Personal Training</h3>
+          <p>Get guidance from certified trainers to reach your goals.</p>
+        </div>
+        <div>
+          <h3>Group Classes</h3>
+          <p>Join our high-energy group classes, from yoga to HIIT.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership Section -->
+  <section id="membership" class="membership">
+    <div class="container">
+      <h2>Membership Plans</h2>
+      <div class="membership-plan">
+        <h3>Basic</h3>
+        <p>R200/month - Access to gym and cardio zone</p>
+      </div>
+      <div class="membership-plan">
+        <h3>Premium</h3>
+        <p>R350/month - All access including classes and pool</p>
+      </div>
+      <div class="membership-plan">
+        <h3>VIP</h3>
+        <p>R500/month - All access + personal trainer sessions</p>
+      </div>
+    </div>
+  </section>
+  <!--gym result -->
+
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="Beginner's Guide To The Gym - No Sweat_ EP8.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content">
+            <h1>Gym Tracker Results</h1>
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Exercise</th>
+                        <th>Reps</th>
+                        <th>Weight (kg)</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                    <!-- Rows will be dynamically added here -->
+                </tbody>
+            </table>
+            <form id="tracker-form">
+                <label for="exercise">Exercise:</label>
+                <input type="text" id="exercise" name="exercise" required>
+                
+                <label for="reps">Reps:</label>
+                <input type="number" id="reps" name="reps" required>
+                
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" required>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <button type="submit">Add Result</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js">
+        document.getElementById('tracker-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const exercise = document.getElementById('exercise').value;
+    const reps = document.getElementById('reps').value;
+    const weight = document.getElementById('weight').value;
+    const date = document.getElementById('date').value;
+    
+    const tableBody = document.getElementById('results-body');
+    const newRow = document.createElement('tr');
+    
+    newRow.innerHTML = `
+        <td>${exercise}</td>
+        <td>${reps}</td>
+        <td>${weight}</td>
+        <td>${date}</td>
+    `;
+    
+    tableBody.appendChild(newRow);
+    
+    // Reset form fields
+    document.getElementById('tracker-form').reset();
+})
+
+  <!-- JavaScript for Smooth Scrolling -->
+  <script>
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
